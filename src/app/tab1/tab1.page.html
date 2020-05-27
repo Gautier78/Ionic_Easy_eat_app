@@ -1,474 +1,128 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-menu side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title>Menu</ion-title>
+        <ion-buttons slot="start">
+          <ion-menu-button auto-hide="false">
+            <ion-icon name="close-outline"></ion-icon>
+          </ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="primary"> </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-card>
+          <img src="../../assets/icon/mick.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Marrant</ion-card-subtitle>
+            <ion-card-title>Mickael</ion-card-title>
+          </ion-card-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+          <ion-card-content>
+            Salut je suis mickael.
+          </ion-card-content>
+        </ion-card>
 
-  <!-- Animated Searchbar -->
-  <ion-searchbar
-    animated
-    showCancelButton="focus"
-    placeholder="Filter Schedules"
-  ></ion-searchbar>
+        <ion-chip>
+          <ion-avatar>
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+"
+            />
+          </ion-avatar>
+          <ion-label>Mickael Marrant | 23 ans</ion-label>
+        </ion-chip>
+        <ion-item>
+          <ion-icon name="heart-outline"></ion-icon>
+          <ion-label>Favorites</ion-label>
+          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <ion-label>Récap alimentation </ion-label>
+          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="trending-up-outline"></ion-icon>
+          <ion-label>Améliorer alimentation</ion-label>
+          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
+        </ion-item>
 
-  <form onsubmit="processForm(event)">
-    <ion-list lines="full" class="ion-no-margin ion-no-padding">
-      <ion-item>
-        <ion-label position="stacked"
-          >First Name <ion-text color="danger">*</ion-text></ion-label
-        >
-        <ion-input
-          required
-          type="text"
-          oninput="handleFirstNameValue(event)"
-        ></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-icon name="help-circle-outline"></ion-icon>
+          <ion-label>Un problème ?</ion-label>
+          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-      <ion-item>
-        <ion-label position="stacked"
-          >Last Name <ion-text color="danger">*</ion-text></ion-label
-        >
-        <ion-input
-          required
-          type="text"
-          oninput="handleLastNameValue(event)"
-        ></ion-input>
-      </ion-item>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Mes Recettes</ion-title>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <ion-icon name="settings-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-card>
+        <img src="../../assets/icon/gnocchis.jpg" />
+        <ion-card-header>
+          <ion-card-subtitle>Difficultée: Moyen</ion-card-subtitle>
+          <ion-card-title>Gnocchis</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Très souvent, on se fait une montagne des gnocchi maison. Pourtant, ce
+          n'est pas si compliqué à cuisiner... Si vous avez un reste de purée
+          ... Lire plus
+        </ion-card-content>
+      </ion-card>
 
-      <ion-item>
-        <ion-label position="floating">Title</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
+      <ion-card>
+        <img src="../../assets/icon/spaghettis.jpg" />
+        <ion-card-header>
+          <ion-card-subtitle>Difficultée: Facile</ion-card-subtitle>
+          <ion-card-title>Spaghettis bolognaise</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Régressives et gourmandes, on ne se lasse jamais des spaghettis à la
+          sauce bolognaise... Cuisinez-les en suivant à la lettre cette recette
+          !
+        </ion-card-content>
+      </ion-card>
 
-      <ion-item>
-        <ion-label position="stacked">Address</ion-label>
-        <ion-input placeholder="Address Line 1"></ion-input>
-        <ion-input placeholder="Address Line 2"></ion-input>
-        <ion-input placeholder="City"></ion-input>
-        <ion-input placeholder="State"></ion-input>
-        <ion-input placeholder="Zip Code"></ion-input>
-      </ion-item>
+      <ion-card>
+        <img src="../../assets/icon/saumon.jpg" />
+        <ion-card-header>
+          <ion-card-subtitle>Difficultée: Facile</ion-card-subtitle>
+          <ion-card-title>Saumon vapeur</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Cette recette vous est présentée par Dominique Boute, nutritionniste
+          et fondateur de monregimeperso.fr Le saumon vapeur est ... Lire plus
+        </ion-card-content>
+      </ion-card>
 
-      <ion-item>
-        <ion-label position="stacked">Notes</ion-label>
-        <ion-textarea></ion-textarea>
-      </ion-item>
-    </ion-list>
-
-    <div class="ion-padding">
-      <ion-button expand="block" type="submit" class="ion-no-margin"
-        >Create account</ion-button
-      >
-    </div>
-  </form>
-
-  <ion-list>
-    <ion-list-header>
-      Group with Divider
-    </ion-list-header>
-
-    <ion-item-group>
-      <ion-item-divider>
-        <ion-label>A</ion-label>
-      </ion-item-divider>
-
-      <ion-item>
-        <ion-label>Adam</ion-label>
-      </ion-item>
-
-      <ion-item lines="none">
-        <ion-label>Alan</ion-label>
-      </ion-item>
-
-      <ion-item-divider>
-        <ion-label>B</ion-label>
-      </ion-item-divider>
-
-      <ion-item lines="none">
-        <ion-label>Brianna</ion-label>
-      </ion-item>
-
-      <ion-item-divider>
-        <ion-label>C</ion-label>
-      </ion-item-divider>
-
-      <ion-item lines="none">
-        <ion-label>Carla</ion-label>
-      </ion-item>
-    </ion-item-group>
-  </ion-list>
-
-  <ion-list>
-    <ion-list-header>
-      Sliding Item
-    </ion-list-header>
-
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>New Message</ion-label>
-      </ion-item>
-
-      <ion-item-options side="start">
-        <ion-item-option color="primary">Mark Unread</ion-item-option>
-      </ion-item-options>
-
-      <ion-item-options side="end">
-        <ion-item-option color="danger">Delete</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>New Message</ion-label>
-      </ion-item>
-
-      <ion-item-options side="start">
-        <ion-item-option color="primary">Mark Unread</ion-item-option>
-      </ion-item-options>
-
-      <ion-item-options side="end">
-        <ion-item-option color="danger">Delete</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
-
-  <ion-list-header>
-    <ion-label>
-      Indeterminate
-    </ion-label>
-  </ion-list-header>
-  <ion-progress-bar type="indeterminate"></ion-progress-bar>
-
-  <ion-list>
-    <ion-radio-group value="grape">
-      <ion-list-header>
-        <ion-label>Fruit</ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-label>Apple</ion-label>
-        <ion-radio slot="start" color="success" value="apple"></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Grape</ion-label>
-        <ion-radio slot="start" color="tertiary" value="grape"></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Cherry</ion-label>
-        <ion-radio slot="start" color="danger" value="cherry"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
-
-    <ion-radio-group allow-empty-selection value="anchovies">
-      <ion-list-header>
-        <ion-label>Pizza Topping</ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-label>Beef</ion-label>
-        <ion-radio slot="end" color="primary" value="beef"></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Anchovies</ion-label>
-        <ion-radio slot="end" color="secondary" value="anchovies"></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Sausage</ion-label>
-        <ion-radio slot="end" color="tertiary" value="sausage"></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Bellpepper</ion-label>
-        <ion-radio slot="end" color="success" value="tomato"></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Tomato</ion-label>
-        <ion-radio slot="end" color="warning" value="carrot"></ion-radio>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Pepperoni</ion-label>
-        <ion-radio slot="end" color="danger" value="pepperoni"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
-  </ion-list>
-
-  <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
-  <ion-reorder-group disabled="false">
-    <!-- Default reorder icon, end aligned items -->
-    <ion-item>
-      <ion-label>
-        Item 1
-      </ion-label>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        Item 2
-      </ion-label>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
-
-    <!-- Default reorder icon, start aligned items -->
-    <ion-item>
-      <ion-reorder slot="start"></ion-reorder>
-      <ion-label>
-        Item 3
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-reorder slot="start"></ion-reorder>
-      <ion-label>
-        Item 4
-      </ion-label>
-    </ion-item>
-
-    <!-- Custom reorder icon end items -->
-    <ion-item>
-      <ion-label>
-        Item 5
-      </ion-label>
-      <ion-reorder slot="end">
-        <ion-icon name="pizza"></ion-icon>
-      </ion-reorder>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        Item 6
-      </ion-label>
-      <ion-reorder slot="end">
-        <ion-icon name="pizza"></ion-icon>
-      </ion-reorder>
-    </ion-item>
-
-    <!-- Items wrapped in a reorder, entire item can be dragged -->
-    <ion-reorder>
-      <ion-item>
-        <ion-label>
-          Item 7
-        </ion-label>
-      </ion-item>
-    </ion-reorder>
-
-    <ion-reorder>
-      <ion-item>
-        <ion-label>
-          Item 8
-        </ion-label>
-      </ion-item>
-    </ion-reorder>
-  </ion-reorder-group>
-
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-        Single Selection
-      </ion-label>
-    </ion-list-header>
-
-    <ion-item>
-      <ion-label>Gender</ion-label>
-      <ion-select placeholder="Select One">
-        <ion-select-option value="f">Female</ion-select-option>
-        <ion-select-option value="m">Male</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Hair Color</ion-label>
-      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-        Multiple Selection
-      </ion-label>
-    </ion-list-header>
-
-    <ion-item>
-      <ion-label>Toppings</ion-label>
-      <ion-select multiple="true" cancelText="Nah" okText="Okay!">
-        <ion-select-option value="bacon">Bacon</ion-select-option>
-        <ion-select-option value="olives">Black Olives</ion-select-option>
-        <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-        <ion-select-option value="peppers">Green Peppers</ion-select-option>
-        <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-        <ion-select-option value="onions">Onions</ion-select-option>
-        <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-        <ion-select-option value="pineapple">Pineapple</ion-select-option>
-        <ion-select-option value="sausage">Sausage</ion-select-option>
-        <ion-select-option value="Spinach">Spinach</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Pets</ion-label>
-      <ion-select multiple="true" [value]="['bird', 'dog']">
-        <ion-select-option value="bird">Bird</ion-select-option>
-        <ion-select-option value="cat">Cat</ion-select-option>
-        <ion-select-option value="dog">Dog</ion-select-option>
-        <ion-select-option value="honeybadger">Honey Badger</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-        Interface Options
-      </ion-label>
-    </ion-list-header>
-
-    <ion-item>
-      <ion-label>Alert</ion-label>
-      <ion-select
-        [interfaceOptions]="customAlertOptions"
-        interface="alert"
-        multiple="true"
-        placeholder="Select One"
-      >
-        <ion-select-option value="bacon">Bacon</ion-select-option>
-        <ion-select-option value="olives">Black Olives</ion-select-option>
-        <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-        <ion-select-option value="peppers">Green Peppers</ion-select-option>
-        <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-        <ion-select-option value="onions">Onions</ion-select-option>
-        <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-        <ion-select-option value="pineapple">Pineapple</ion-select-option>
-        <ion-select-option value="sausage">Sausage</ion-select-option>
-        <ion-select-option value="Spinach">Spinach</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Popover</ion-label>
-      <ion-select
-        [interfaceOptions]="customPopoverOptions"
-        interface="popover"
-        placeholder="Select One"
-      >
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Action Sheet</ion-label>
-      <ion-select
-        [interfaceOptions]="customActionSheetOptions"
-        interface="action-sheet"
-        placeholder="Select One"
-      >
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="purple">Purple</ion-select-option>
-        <ion-select-option value="yellow">Yellow</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item>
-      <ion-label>Blueberry</ion-label>
-      <ion-toggle slot="start" name="blueberry" checked></ion-toggle>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Apple</ion-label>
-      <ion-toggle
-        slot="start"
-        name="apple"
-        color="secondary"
-        checked
-      ></ion-toggle>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Grape</ion-label>
-      <ion-toggle
-        slot="start"
-        name="grape"
-        color="tertiary"
-        checked
-      ></ion-toggle>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Kiwi</ion-label>
-      <ion-toggle slot="start" name="kiwi" color="success" checked></ion-toggle>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Orange</ion-label>
-      <ion-toggle
-        slot="start"
-        name="banana"
-        color="warning"
-        checked
-      ></ion-toggle>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Cherry</ion-label>
-      <ion-toggle
-        slot="start"
-        name="cherry"
-        color="danger"
-        checked
-      ></ion-toggle>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Banana</ion-label>
-      <ion-toggle slot="start" name="banana" color="light" checked></ion-toggle>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Cantaloupe</ion-label>
-      <ion-toggle
-        slot="start"
-        name="cantaloupe"
-        color="medium"
-        checked
-      ></ion-toggle>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Blackberry</ion-label>
-      <ion-toggle
-        slot="start"
-        name="blackberry"
-        color="dark"
-        checked
-      ></ion-toggle>
-    </ion-item>
-  </ion-list>
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
-</ion-footer>
+      <ion-card>
+        <img src="../../assets/icon/crepes.jpg" />
+        <ion-card-header>
+          <ion-card-subtitle>Difficultée: Facile</ion-card-subtitle>
+          <ion-card-title>Crêpes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Ma recette facile et rapide de pâte à crêpes facile à réaliser pour un
+          résultat excellent. Elles sont légères, parfumées, bien dorées et peu
+          sucrées (ce qui permet ... Lire plus
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </div>
+</ion-app>
