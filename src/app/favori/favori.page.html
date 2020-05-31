@@ -2,10 +2,10 @@
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
+        <ion-title>Mes Recettes favories</ion-title>
         <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
+          <ion-back-button defaultHref="tab1"></ion-back-button>
         </ion-buttons>
-        <ion-title>Mes Recettes</ion-title>
         <ion-buttons slot="primary">
           <ion-button routerLink="/parametre">
             <ion-icon name="settings-outline"></ion-icon>
@@ -14,7 +14,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
-      <ion-card routerLink="gnocchis">
+      <ion-card routerLink="/gnocchis">
         <img src="../../assets/icon/gnocchis.jpg" />
         <ion-card-header>
           <ion-card-subtitle>Difficultée: Moyen</ion-card-subtitle>

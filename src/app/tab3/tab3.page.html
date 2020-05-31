@@ -1,63 +1,4 @@
 <ion-app>
-  <ion-menu side="start" content-id="main-content">
-    <ion-header>
-      <ion-toolbar translucent>
-        <ion-title>Menu</ion-title>
-        <ion-buttons slot="start">
-          <ion-menu-button auto-hide="false">
-            <ion-icon name="close-outline"></ion-icon>
-          </ion-menu-button>
-        </ion-buttons>
-        <ion-buttons slot="primary"> </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-card>
-          <img src="../../assets/icon/mick.jpg" />
-          <ion-card-header>
-            <ion-card-subtitle>Marrant</ion-card-subtitle>
-            <ion-card-title>Mickael</ion-card-title>
-          </ion-card-header>
-
-          <ion-card-content>
-            Salut je suis mickael.
-          </ion-card-content>
-        </ion-card>
-
-        <ion-chip>
-          <ion-avatar>
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+"
-            />
-          </ion-avatar>
-          <ion-label>Mickael Marrant | 23 ans</ion-label>
-        </ion-chip>
-        <ion-item>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-label>Favorites</ion-label>
-          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="newspaper-outline"></ion-icon>
-          <ion-label>Récap alimentation </ion-label>
-          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="trending-up-outline"></ion-icon>
-          <ion-label>Améliorer alimentation</ion-label>
-          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
-        </ion-item>
-
-        <ion-item>
-          <ion-icon name="help-circle-outline"></ion-icon>
-          <ion-label>Un problème ?</ion-label>
-          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
@@ -65,9 +6,8 @@
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>Ma liste de courses</ion-title>
-
         <ion-buttons slot="primary">
-          <ion-button>
+          <ion-button routerLink="/parametre">
             <ion-icon name="settings-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
@@ -104,67 +44,110 @@
       <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
       <ion-reorder-group disabled="false">
         <!-- Default reorder icon, end aligned items -->
-        <ion-item>
-          <ion-label>
-            Tomates
-          </ion-label>
-          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            <ion-reorder slot="end"></ion-reorder>
+            <ion-label>Tomates</ion-label>
+          </ion-item>
 
-        <ion-item>
-          <ion-label>
-            Sel
-          </ion-label>
-          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Modifier</ion-item-option>
+          </ion-item-options>
 
-        <ion-item>
-          <ion-label>
-            Persil
-          </ion-label>
-          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger">Supprimer</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            <ion-reorder slot="end"></ion-reorder>
+            <ion-label>Steak</ion-label>
+          </ion-item>
 
-        <ion-item>
-          <ion-label>
-            500g Steak
-          </ion-label>
-          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
-        <ion-item>
-          <ion-label>
-            Céreale
-          </ion-label>
-          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Modifier</ion-item-option>
+          </ion-item-options>
 
-        <ion-item>
-          <ion-label>
-            Ketchup
-          </ion-label>
-          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
-        <ion-item>
-          <ion-label>
-            Ice-tea
-          </ion-label>
-          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger">Supprimer</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            <ion-reorder slot="end"></ion-reorder>
+            <ion-label>Persil</ion-label>
+          </ion-item>
 
-        <ion-item>
-          <ion-label>
-            Dentifrice
-          </ion-label>
-          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-          <ion-reorder slot="end"></ion-reorder>
-        </ion-item>
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Modifier</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="danger">Supprimer</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            <ion-reorder slot="end"></ion-reorder>
+            <ion-label>cereales</ion-label>
+          </ion-item>
+
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Modifier</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="danger">Supprimer</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            <ion-reorder slot="end"></ion-reorder>
+            <ion-label>dentifrice</ion-label>
+          </ion-item>
+
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Modifier</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="danger">Supprimer</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            <ion-reorder slot="end"></ion-reorder>
+            <ion-label>ice tea</ion-label>
+          </ion-item>
+
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Modifier</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="danger">Supprimer</ion-item-option>
+          </ion-item-options> </ion-item-sliding
+        ><ion-item-sliding>
+          <ion-item>
+            <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            <ion-reorder slot="end"></ion-reorder>
+            <ion-label>pommes</ion-label>
+          </ion-item>
+
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Modifier</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="danger">Supprimer</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
       </ion-reorder-group>
     </ion-content>
   </div>

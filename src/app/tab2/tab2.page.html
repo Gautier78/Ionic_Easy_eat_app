@@ -1,63 +1,4 @@
 <ion-app>
-  <ion-menu side="start" content-id="main-content">
-    <ion-header>
-      <ion-toolbar translucent>
-        <ion-title>Menu</ion-title>
-        <ion-buttons slot="start">
-          <ion-menu-button auto-hide="false">
-            <ion-icon name="close-outline"></ion-icon>
-          </ion-menu-button>
-        </ion-buttons>
-        <ion-buttons slot="primary"> </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-card>
-          <img src="../../assets/icon/mick.jpg" />
-          <ion-card-header>
-            <ion-card-subtitle>Marrant</ion-card-subtitle>
-            <ion-card-title>Mickael</ion-card-title>
-          </ion-card-header>
-
-          <ion-card-content>
-            Salut je suis mickael.
-          </ion-card-content>
-        </ion-card>
-
-        <ion-chip>
-          <ion-avatar>
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+"
-            />
-          </ion-avatar>
-          <ion-label>Mickael Marrant | 23 ans</ion-label>
-        </ion-chip>
-        <ion-item>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-label>Favorites</ion-label>
-          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="newspaper-outline"></ion-icon>
-          <ion-label>Récap alimentation </ion-label>
-          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="trending-up-outline"></ion-icon>
-          <ion-label>Améliorer alimentation</ion-label>
-          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
-        </ion-item>
-
-        <ion-item>
-          <ion-icon name="help-circle-outline"></ion-icon>
-          <ion-label>Un problème ?</ion-label>
-          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
@@ -66,13 +7,14 @@
         </ion-buttons>
         <ion-title>Easy-Eat</ion-title>
         <ion-buttons slot="primary">
-          <ion-button>
+          <ion-button routerLink="/parametre">
             <ion-icon name="settings-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-button
+      routerLink="decouvrir"
       fill="outline"
       color="success"
       size="large"
@@ -81,6 +23,7 @@
       >Découvrir une recette</ion-button
     >
     <ion-button
+      routerLink="cuisiner"
       fill="outline"
       color="secondary"
       size="large"
@@ -91,4 +34,5 @@
 
     <ion-content class="ion-padding"> </ion-content>
   </div>
+  <ion-list> </ion-list>
 </ion-app>

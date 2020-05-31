@@ -1,12 +1,69 @@
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false">
+          <ion-icon name="close-outline"></ion-icon>
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="primary"> </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-card routerLink="profil">
+        <img src="../../assets/icon/mick.jpg" />
+        <ion-card-header>
+          <ion-card-subtitle>Marrant</ion-card-subtitle>
+          <ion-card-title>Mickael</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Salut je suis mickael.
+        </ion-card-content>
+      </ion-card>
+      <ion-item>
+        <ion-icon name="rocket-outline"></ion-icon>
+        <ion-label routerLink="/decouvrir"
+          >Découvrir une recette</ion-label
+        > </ion-item
+      ><ion-item>
+        <ion-icon name="restaurant-outline"></ion-icon>
+        <ion-label routerLink="/cuisiner">Cuisiner vos restes</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="heart-outline"></ion-icon>
+        <ion-label routerLink="/favori">Favories</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="newspaper-outline"></ion-icon>
+        <ion-label routerLink="/recap"> Récap de mon alimentation </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="trending-up-outline"></ion-icon>
+        <ion-label routerLink="/ameliorer">
+          Améliorer mon alimentation</ion-label
+        >
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="help-circle-outline"></ion-icon>
+        <ion-label routerLink="/probleme-page"> Un problème ?</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
 <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="tab1">
-      <ion-icon name="add-outline"></ion-icon>
+      <ion-icon name="heart-outline"></ion-icon>
       <ion-label>Mes recettes</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="tab2">
-      <ion-icon name="home"></ion-icon>
+      <ion-icon name="home-outline"></ion-icon>
       <ion-label>Accueil</ion-label>
     </ion-tab-button>
 
