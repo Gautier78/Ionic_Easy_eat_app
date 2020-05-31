@@ -9,11 +9,9 @@ import { ProblemePagePage } from "../probleme-page/probleme-page.page";
 import { CuisinerPage } from "../cuisiner/cuisiner.page";
 import { DecouvrirPage } from "../decouvrir/decouvrir.page";
 import { from } from "rxjs";
-/*
 
 import { GnocchisPage } from "../gnocchis/gnocchis.page";
 import { ProfilPage } from "../profil/profil.page";
-*/
 
 const routes: Routes = [
   {
@@ -74,12 +72,11 @@ const routes: Routes = [
   {
     path: "decouvrir",
     component: DecouvrirPage,
-  } /*
+  },
   {
     path: "cuisiner",
     component: CuisinerPage,
   },
-  
   {
     path: "decouvrir",
     component: DecouvrirPage,
@@ -91,7 +88,7 @@ const routes: Routes = [
   {
     path: "profil",
     component: ProfilPage,
-  },*/,
+  },
 ];
 
 @NgModule({
